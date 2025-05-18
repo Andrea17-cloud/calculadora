@@ -1,0 +1,95 @@
+:root{
+    ---bg: linear-gradient(to bottom right, #4B4F57, #1b1b1b);
+    --bg-color-base-t: #4B4F57;
+    --bg-color-orange-t: #FF9500;
+    --bg-color-gray-t: #5C6169;
+    --color-text: #ffff;
+    --size-button: 64px;
+    --border-r-button: 50%;
+    --size-text-button-base: 30px;
+    --size-text-result: 50px
+}
+
+.calculadora {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.display {
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 24px;
+  text-align: right;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.teclado button {
+  background-color: hsl(0, 42%, 89%);
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(84, 93, 99, 0.1);
+  transition: background-color 0.3s ease;
+  width: 60px;
+  height: 60px;
+  
+
+}
+
+.teclado button:hover {
+  background-color: #ddd;
+}
+
+.teclado .operador {
+  background-color: #f9a825;
+  color: white;
+}
+
+.teclado .operador:hover {
+  background-color: #e65100;
+}
+
+.teclado .igual {
+  background-color: #4caf50;
+  color: white;
+  grid-column: span 1; /* Ocupa una columna */
+}
+
+.teclado .igual:hover {
+  background-color: #388e3c;
+}
+
+.teclado .limpiar {
+  background-color: #ef5350;
+  color: white;
+  grid-column: span 1; /* Ocupa una columna */
+}
+
+.teclado .limpiar:hover {
+  background-color: #d32f2f;
+}
+
+/* Asegurarse de que el botón de '0' ocupe dos columnas si se desea un diseño específico */
+.teclado button:nth-child(13) { /* El botón '0' es el treceavo */
+  grid-column: span 1;
+}
